@@ -28,11 +28,11 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           # ftp server
-          server: 
+          server: ${{secret.FTP_SERVER}}
           # ftp username
-          username: 
+          username: ${{secret.FTP_USER}}
           # ftp password
-          password: 
+          password: ${{secret.FTP_PASSWD}}
           # Server port to connect to (read your web hosts docs)
           port: # optional
           # protocol to deploy with - ftp, ftps, or ftps-legacy
@@ -40,7 +40,7 @@ jobs:
           # Folder to upload from, must end with trailing slash /
           local-dir: # optional
           # Path to upload to on the server. Must end with trailing slash /
-          server-dir: # optional
+          server-dir: /dev/laravel-vue/
           # Path and name of the state file - this file is used to track which files have been deployed
           state-name: # optional
           # Prints which modifications will be made with current config options, but doesnt actually make any changes
