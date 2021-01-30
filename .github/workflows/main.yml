@@ -15,4 +15,4 @@ jobs:
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
         port: 22
-        server-dir: /dev/laravel-vue
+        server-dir: /dev/laravel-vue/
