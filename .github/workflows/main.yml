@@ -36,9 +36,7 @@ jobs:
           # List files to upload to ftp server
           files: /
           # Source folder
-          src: # optional, default is 
           # Destination folder
           dest: /dev/laravel-vue # optional, default is /
-          # For debug
-          dryRun: # optional
+         
      
