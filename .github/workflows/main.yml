@@ -32,7 +32,7 @@ jobs:
           # ftp username
           username: ${{secrets.FTP_USER}}
           # ftp password
-          password: ${{secrets.FTP_PASSWD}}
+          password: ${{secrets.FTP_PASSWORD}}
           # Server port to connect to (read your web hosts docs)
           port: # optional
           # protocol to deploy with - ftp, ftps, or ftps-legacy
