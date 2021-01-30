@@ -22,28 +22,23 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: FTP Deployer
+      - name: FTP Uploader
         # You may pin to the exact commit or the version.
-        # uses: sand4rt/ftp-deployer@23eeee83b7ee23d5355f7c1b72bd003aea371f59
-        uses: sand4rt/ftp-deployer@v1.1
+        # uses: zinh/ftp-uploader-action@10d256274547c8b84848edf454bfeb0b8a451c41
+        uses: zinh/ftp-uploader-action@v0.4
         with:
-          # FTP host URL like: ftp.host.com
-          host: ${{secrets.FTP_SERVER}}
-          # FTP port
-          port: # optional, default is 21
-          # Ftp username
-          username: ${{secrets.FTP_USER}}
-          # Ftp password
-          password: ${{secrets.FTP_PASSWORD}} 
-          # The remote folder location of your FTP server
-          remote_folder: /dev/laravel-vue# optional
-          # The local folder location
-          local_folder: # optional, default is dist
-          # Remove existing files inside FTP remote folder
-          cleanup: # optional
-          # includes
-          include: # optional
-          # exclude
-          exclude: # optional
-          # passive
-          pasive: # optional
+          # Hostname of ftp server, eg: ftpHostname: ftp.test
+          ftpHostname: ${{secrets.FTP_SERVER}}
+          # User of ftp account
+          ftpUsername: ${{secrets.FTP_USER}} # optional, default is anonymous
+          # Password of ftp account
+          ftpPassword: ${{secrets.FTP_PASSWORD}}  # optional, default is 
+          # List files to upload to ftp server
+          files: /
+          # Source folder
+          src: # optional, default is 
+          # Destination folder
+          dest: /dev/laravel-vue # optional, default is /
+          # For debug
+          dryRun: # optional
+     
