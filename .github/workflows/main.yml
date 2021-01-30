@@ -28,11 +28,11 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with:
           # ftp server
-          server: ${{secret.FTP_SERVER}}
+          server: ${{secrets.FTP_SERVER}}
           # ftp username
-          username: ${{secret.FTP_USER}}
+          username: ${{secrets.FTP_USER}}
           # ftp password
-          password: ${{secret.FTP_PASSWD}}
+          password: ${{secrets.FTP_PASSWD}}
           # Server port to connect to (read your web hosts docs)
           port: # optional
           # protocol to deploy with - ftp, ftps, or ftps-legacy
